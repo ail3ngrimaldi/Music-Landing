@@ -1,6 +1,8 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import SpotifyEmbed from './SpotifyEmbed';
+import SpotifyFollow from './SpotifyFollow';
 
 export default function Home() {
   return (
@@ -24,9 +26,9 @@ export default function Home() {
         <section className="h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-6xl font-bold mb-4">Bel Grim</h1>
-            <p className="text-2xl mb-8">Latest Album: "Album Title"</p>
-            <Link href="/music" className="bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">
-              Listen Now
+            <p className="text-2xl mb-8">EP Coming soon</p>
+            <Link href="https://open.spotify.com/intl-es/artist/0WlcBcD95iZnuTM1tIVqw4?si=g364gy9vQcKq3AMx10a1wA" className="bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">
+              Listen On Spotify
             </Link>
           </div>
         </section>
@@ -36,9 +38,9 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-8">Latest Tracks</h2>
           <div className="flex justify-center space-x-4">
             {/* Replace with actual Spotify embeds */}
-            <div className="w-64 h-80 bg-gray-800 rounded-lg"></div>
-            <div className="w-64 h-80 bg-gray-800 rounded-lg"></div>
-            <div className="w-64 h-80 bg-gray-800 rounded-lg"></div>
+            <div className="w-64 h-80 bg-gray-800 rounded-lg"><SpotifyEmbed uri="https://open.spotify.com/embed/track/12l5HVbokkmHJSGnjksrTH?utm_source=generator&theme=0" wide={true} /></div>
+            <div className="w-64 h-80 bg-gray-800 rounded-lg"><SpotifyEmbed uri="https://open.spotify.com/embed/track/3acD8lbYQ5iD7Rta5x6hdD?utm_source=generator" wide={true} /></div>
+            <div className="w-64 h-80 bg-gray-800 rounded-lg"><SpotifyEmbed uri="https://open.spotify.com/embed/track/6B6bmxNrmt6jDLbRhUgj0M?utm_source=generator" wide={true} /></div>
           </div>
         </section>
 
